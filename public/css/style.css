@@ -34,3 +34,23 @@ main {
 .custom {
     padding-top: 10px;
 }
+
+.login-page {
+    font-size: 32px;
+    padding: 30px;
+}
+
+.login-header {
+    font-size: 40px;
+    padding: 20px;
+}
+
+input {
+    margin: 20px;
+}
+
+#message {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
