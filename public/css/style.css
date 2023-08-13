@@ -1,0 +1,36 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(226, 226, 221);
+}
+
+nav {
+    background-color: rgb(210, 144, 219);
+    font-size: 24px;
+    padding: 10px;
+}
+
+.main {
+    font-size: 40px;
+    font-style: italic bold;
+    padding: 20px;
+}
+
+.sub {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+main {
+    padding: 10px;
+}
+
+.postheader {
+    text-align: center;
+    font-size: 36px;
+    padding: 30px;
+    font-style: italic;
+}
+
+.custom {
+    padding-top: 10px;
+}
