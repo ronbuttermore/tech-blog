@@ -5,11 +5,8 @@
     <br>
 
     <h3>Comments: </h3>
-    {{#each comments as |comment|}}
-    <p>{{comment.comment}} - Posted on {{comment.date_created}} by {{/each}} {{commentedBy}}
-    </p>
-
-
+        {{#each comments as |comment|}}
+         <p>{{comment.comment}} - Posted on {{comment.date_created}} by {{/each}} {{commentedBy}}</p>
 
 {{#if logged_in}}
 <br>
@@ -24,11 +21,13 @@
         <button id="submitComment" class="btn btn-primary" type="submit">Post</button>
       </div>
     </form>
+    <p id="user-id" style="display: none">{{user_id}}</p>
+    <p id="post-id" style="display: none">{{id}}</p>
   </div>
 {{else}}
 <p>You must be logged in to comment on this post.</p>
 {{/if}}
 </div>
 
-<script src="js/comment.js"></script>
-<script src="../js/comment.js"></script>
+<script src="js/post.js"></script>
+<script src="../js/post.js"></script>

@@ -41,6 +41,10 @@ router.get('/', async (req, res) => {
 
       const post = postData.get({ plain: true });
 
+      req.session.save(() => {
+        req.session.post_id = req.params.id;
+      });
+
       const userData = await User.findAll();
       const users = userData.map((user) => user.get({ plain: true }));
       let commentedBy = '';
@@ -52,7 +56,7 @@ router.get('/', async (req, res) => {
         }
       }
       post.commentedBy = commentedBy;
-
+      
       res.render('post', {
         ...post,
         logged_in: req.session.logged_in,

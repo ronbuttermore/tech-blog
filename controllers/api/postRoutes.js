@@ -1,8 +1,11 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, Comment } = require('../../models');
 
 router.get('/', async (req, res) => {
-    const postData = await Post.findAll();
+    const postData = await Post.findAll({include: [
+        {model: Comment,
+        attributes: ['comment']},
+    ]});
     res.json(postData);
 });
 
