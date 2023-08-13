@@ -1,5 +1,31 @@
 <div class="text-center">
-  <h2>{{title}}</h2>
-  <p>{{contents}}</p>
+  <h2 class="post-title">{{title}}</h2>
+  <p class="post-content">{{contents}}</p>
   <p>Created by {{user.name}} on {{date_created}}</p>
+    <br>
+
+    <h3>Comments: </h3>
+    {{#each comments as |comment|}}
+    <p>{{comment.comment}} - Posted on {{comment.date_created}} by {{/each}} {{commentedBy}}
+    </p>
+
+
+
+{{#if logged_in}}
+<br>
+<p>Leave a comment below: </p>
+<div class="col-md-12 center">
+    <form class="form comment-form">
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <input class="comment-input" type="text" id="comment" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Post</button>
+      </div>
+    </form>
+  </div>
+{{else}}
+<p>You must be logged in to comment on this post.</p>
+{{/if}}
 </div>

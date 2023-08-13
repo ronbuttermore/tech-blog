@@ -58,3 +58,14 @@ input {
 .title {
     font-size: 30px;
 }
+
+.post-title {
+    padding: 20px;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.post-content {
+    font-size: 20px;
+    padding: 20px;
+}

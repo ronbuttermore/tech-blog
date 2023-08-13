@@ -1,0 +1,21 @@
+[
+    {
+      "comment": "Test Comment 1",
+      "post_id": 1,
+      "date_created": "2023-08-13",
+      "user_id": 1
+    },
+    {
+        "comment": "Test Comment 2",
+        "post_id": 2,
+        "date_created": "2023-08-13",
+        "user_id": 2
+      },
+      {
+        "comment": "Test Comment 3",
+        "post_id": 3,
+        "date_created": "2023-08-13",
+        "user_id": 3
+      }
+  ]
+  

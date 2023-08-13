@@ -1,16 +1,14 @@
 <h3 class="postheader">All Posts: </h3>
 
-<div class="row post">
+<div class="row ">
     {{#each posts as |post| }}
-    <div class="col-lg-4 col-md-6 col-sm-12 custom" >
-        <div class="card  w-100 h-100" style="width: 18rem;">
-            <div class="card-body">
-                <a href="/post/{{post.id}}" class="card-title post title">{{post.title}}</a>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{post.user_id}}</h6>
+    <div class="col-lg-4 col-md-6 col-sm-12 post custom" id="card{{id}}">
+        <div class="card  w-100 h-100 " style="width: 18rem;">
+            <div class="card-body ">
+                <a href="/post/{{post.id}}" class="card-title title">{{post.title}}</a>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{user.name}}</h6>
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{post.date_created}}</h6>
                 <p class="card-text">{{post.contents}}</p>
-                <a href="#" class="card-link">View Post</a>
-                <a href="#" class="card-link">View User</a>
             </div>
         </div>
     </div>

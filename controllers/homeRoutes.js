@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
+const getUser = require('../utils/helpers');
 
 router.get('/', async (req, res) => {
     try {
@@ -29,17 +30,34 @@ router.get('/', async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ['name'],
+            attributes: ['id', 'name'],
+          },
+          {
+            model: Comment,
+            attributes: ['comment', 'user_id', 'date_created'],
           },
         ],
       });
-  
+
       const post = postData.get({ plain: true });
-  
+
+      const userData = await User.findAll();
+      const users = userData.map((user) => user.get({ plain: true }));
+      let commentedBy = '';
+      for (i=0; i<post.comments.length; i++) {
+        for (j=0; j<users.length; j++) {
+          if (post.comments[i].user_id==users[j].id){
+            commentedBy = users[j].name;
+          }
+        }
+      }
+      post.commentedBy = commentedBy;
+
       res.render('post', {
         ...post,
         logged_in: req.session.logged_in
       });
+
     } catch (err) {
       res.status(500).json(err);
     }
