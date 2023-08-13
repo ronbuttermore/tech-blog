@@ -55,7 +55,8 @@ router.get('/', async (req, res) => {
 
       res.render('post', {
         ...post,
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        user_id: req.session.user_id,
       });
 
     } catch (err) {

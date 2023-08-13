@@ -3,7 +3,6 @@ const addComment = async (event) => {
 
     const comment = document.querySelector('#comment').value.trim();
 
-
     const response = await fetch('/api/comments', {
       method: 'POST',
       body: JSON.stringify({ comment }),
@@ -17,5 +16,5 @@ const addComment = async (event) => {
     }
   };
   
-  document.querySelector('#comment').addEventListener('click', addComment);
+  document.querySelector('.comment-form').addEventListener('submit', addComment);
   
