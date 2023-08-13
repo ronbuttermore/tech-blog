@@ -8,7 +8,7 @@ You can find this app deployed live at https://limitless-wave-73124-dcb943b71e89
 
 On the home page, you can view posts from other users. You can click the 'login' link in the nav bar to create an account and start posting! Once you've created an account, you can see your posts and create new posts by clicking on the 'dashboard' link, and you can also comment on other users' posts. Use the logout button once you're finished using the application
 
-![This image is a screenshot of the tech blog application.](capture.PNG)
+![This image is a screenshot of the tech blog application.](Capture.PNG)
 
 
 ## License
