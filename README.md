@@ -1,8 +1,14 @@
 # Tech Blog
 
 ## Description
+This tech blog was created for users to share posts about tech-related subjects and learn more about coding. 
 
 ## Usage
+You can find this app deployed live at https://limitless-wave-73124-dcb943b71e89.herokuapp.com/
+
+On the home page, you can view posts from other users. You can click the 'login' link in the nav bar to create an account and start posting! Once you've created an account, you can see your posts and create new posts by clicking on the 'dashboard' link, and you can also comment on other users' posts. Use the logout button once you're finished using the application
+
+
 
 ## License
 MIT License
