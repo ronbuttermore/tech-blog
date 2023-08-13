@@ -1,10 +1,26 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
 
 router.get('/', async (req, res) => {
     const userData = await User.findAll();
     res.json(userData);
 });
+
+router.get('/:id', async (req, res) => {
+    try {
+      const userData = await User.findByPk(req.params.id, {
+        include: [
+            { model: Post,
+                attributes: ['id', 'title', 'contents'], 
+            },
+        ],
+      })
+      res.json(userData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 router.post('/', async (req, res) => {
     try {
